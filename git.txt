@@ -5,3 +5,4 @@ cd d:/geekhub
 git init
 git status
 git add.
+git commit -m "first change"
