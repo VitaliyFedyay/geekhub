@@ -58,7 +58,7 @@ function callBackFunc(massive, callback) {
 function massInObj(arr) {
   var object = {};
   arr.forEach( function(elem, i, arr) {
-  object[i] = arr[i];
+    object[i] = arr[i];
   });
   console.log("Mass in obj:",object);
 };
