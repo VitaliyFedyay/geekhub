@@ -35,6 +35,7 @@ const mySort = function(arr, callback) {
       }
     }
   }
+  console.log(arr);
   return arr; 
 }
 
@@ -66,4 +67,4 @@ console.log(sort);
 
 console.log('myPush');
 myPush(array,12);
-console.log(array);
+

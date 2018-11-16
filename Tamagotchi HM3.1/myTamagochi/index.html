@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tamagotchi</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div id="title">
+    <h1 id="died">Tamagotchi</h1>
+    <div id="info">
+      <span id="info-health"></span><br>
+      <span id="info-food"></span><br>
+      <span id="info-play"></span><br>
+      <span id="info-sleep"></span>
+    </div>
+  </div>
+
+  <div id="pet">
+    <img id="rip" src="img/homi.png" width="400" height="400" alt="pet">
+  </div>
+
+  <div id="time"> 
+    <p>Timer <output name="result" id="timer" value = "0"></output> sec.</p>
+  </div>
+
+  <div>
+    <p>
+      <input id="start" type="button" value="START NEW GAME">
+    </p>
+  </div>
+
+  <form name="Homi">
+    <div id="option">
+      <div>
+        <p>
+          Health <progress id="health" value="100" max="100" min="0"></progress>
+        </p>
+      </div>
+
+      <div>
+        <p>
+          Food <progress id="food" value="100" max="100" min="0"></progress>
+        </p>
+      </div>
+
+      <div>
+        <p>
+          Play <progress id="play" value="100" max="100" min="0"></progress>
+        </p>
+      </div>
+
+      <div>
+        <p>
+          Sleep <progress id="sleep" value="100" max="100" min="0"></progress>
+        </p>
+      </div> <br>
+     
+      <div id="button">
+        <p id="style-button">
+          <input id="stat-health" type="button" value="GetHealth">
+          <input id="stat-food" type="button" value="GetFood">
+          <input id="stat-play" type="button" value="GetPlay">
+          <input id="stat-sleep" type="button" value="GetSleep">
+          <input id="stat-kill" type="button" value="MonsterKILL">
+        </p>
+      </div>
+
+    </div>
+  </form>
+</body>
+
+</html>
