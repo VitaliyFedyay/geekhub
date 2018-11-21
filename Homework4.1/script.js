@@ -1,70 +1,73 @@
 const array = [8,2,4,9,1];
 
-const myForEach = function(arr,callback) {
-  for(let i = 0; i < arr.length; i++) {
-    callback(arr[i], i, arr);
+Array.prototype.myForEach = function(func) {
+  for(var i = 0; i < this.length; i++) {
+    func(this[i], i, this);
   }
 };
 
-const myMap = function(arr,callback) {
-  let newArr = [];
-  for(let i = 0; i < arr.length; i++) {
-    newArr.push(callback(arr[i], i, arr));
+Array.prototype.myMap = function(func) {
+  var newArr = [];
+  for(var i = 0; i < this.length; i++) {
+    newArr.push(func(this[i], i, this));
   }
   return newArr;
 };
 
-const mySort = function(arr, callback) {
+Array.prototype.mySort = function(func) {
 
-  for(let i = 0; i < arr.length; i++) {
-    for(let j = i; j < arr.length; j++) {
-      if(callback(arr[i], arr[j])) {
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+  for(var i = 0; i < this.length; i++) {
+    for(var j = i; j < this.length; j++) {
+      if(func(this[i], this[j])) {
+        var temp = this[i];
+        this[i] = this[j];
+        this[j] = temp;
       }
     }
   }
-  return arr; 
+  return this; 
 }
 
-const myFilter = function(arr,callback) {
-  let newArr = [];
-  for(let i = 0; i < arr.length; i++) {
-    if(callback(arr[i], i, arr)) {
-      newArr.push(arr[i]);
+Array.prototype.myFilter = function(func) {
+  var newArr = [];
+  for(var i = 0; i < this.length; i++) {
+    if(func(this[i], i, this)) {
+      newArr.push(this[i]);
     }
   }
   return newArr;
 };
 
 
-const myPush = function(arr, item) {
-  arr[arr.length] = item;
+Array.prototype.myPush = function(num) {
+  for (i = 0; i < arguments.length; i++) {
+  this[this.length] = arguments[i];
+  }
 };
 
+
 console.log('forEach');
-myForEach(array, function(num, i, arr) {
+array.myForEach(function(num, i, arr) {
   console.log('num = ' + num + ', i = ' + i + ',', arr)
 });
 
 console.log('myMap');
-myMap(array, function(num, i, arr) {
+array.myMap(function(num, i, arr) {
   console.log('num = ' + num + ', i = ' + i + ',', arr)
 });
 
 console.log('mySort');
-const sort = mySort(array, function(a, b) {
+const sort = array.mySort(function(a, b) {
   return a < b;
 });
 console.log(sort);
 
 console.log('myFilter');
-const result = myFilter(array, function(num) {
-  return num > 5;
+const result = array.myFilter(function(num) {
+  return num > 3;
 });
 console.log(result);
 
 console.log('myPush');
-myPush(array,12);
+array.myPush(12);
 console.log(array);
