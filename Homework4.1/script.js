@@ -1,4 +1,4 @@
-const array = [8,2,4,9,1];
+var array = [8,2,4,9,1];
 
 Array.prototype.myForEach = function(func) {
   for(var i = 0; i < this.length; i++) {
@@ -57,13 +57,13 @@ array.myMap(function(num, i, arr) {
 });
 
 console.log('mySort');
-const sort = array.mySort(function(a, b) {
+var sort = array.mySort(function(a, b) {
   return a < b;
 });
 console.log(sort);
 
 console.log('myFilter');
-const result = array.myFilter(function(num) {
+var result = array.myFilter(function(num) {
   return num > 3;
 });
 console.log(result);
