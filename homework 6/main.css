@@ -1,0 +1,95 @@
+body {
+  background: url('https://avatars.mds.yandex.net/get-pdb/805781/0e77294d-2f57-4d8b-9843-bef465a056f4/s1200') no-repeat;
+  background-size: 100%;
+}
+
+#slides{
+  position: relative;
+  height: 300px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 1;
+
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.showing{
+  opacity: 1;
+  z-index: 2;
+}
+
+.controls{
+  display: none;
+}
+
+.slide{
+  font-size: 40px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+
+background-size: cover;
+}
+
+.slide:nth-of-type(1){
+  background-color: red;
+background-image: url('http://factosvit.com.ua/wp-content/uploads/2016/12/Zabavni-i-smishni-tvaryny-678x381.jpg');
+}
+
+.slide:nth-of-type(2){
+  background-color: orange;
+background-image: url('https://ukr.segodnya.ua/img/article/10156/61_main_new.1493069754.jpg');
+}
+
+.slide:nth-of-type(3){
+  background-color: green;
+background-image: url('https://avatars.mds.yandex.net/get-pdb/752643/83e982ef-b194-4327-acf9-ba9b1fb98848/orig');
+}
+
+.controls{
+background: #333;
+color: #fff;
+border: none;
+padding: 20px 0px;
+font-size: 20px;
+cursor: pointer;
+border: 2px solid #fff;
+margin: 10px 0px 0px 10px;
+width: 70px;
+}
+
+.controls:hover,
+.controls:focus{
+background: #eee;
+color: #333;
+}
+
+.container{
+  width: 500px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 10px; 
+  top: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.buttons{
+position: relative;
+margin: 0 auto;
+margin-left: 150px;
+}
