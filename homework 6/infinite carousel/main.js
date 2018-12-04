@@ -5,19 +5,19 @@ for(let i = 0; i < controls.length; i++){
 
 let slides = document.querySelectorAll('#slides .slide')
 let currentSlide = 0
-let slideInterval = setInterval(nextSlide,10000)
+let slideInterval = setInterval(nextSlide, 10000)
 
 function nextSlide() {
-  goToSlide(currentSlide+1)
+  goToSlide(currentSlide + 1)
 }
 
 function previousSlide() {
-  goToSlide(currentSlide-1)
+  goToSlide(currentSlide - 1)
 }
 
 function goToSlide(n) {
   slides[currentSlide].className = 'slide'
-  currentSlide = (n+slides.length)%slides.length
+  currentSlide = (n + slides.length) % slides.length
   slides[currentSlide].className = 'slide showing'
 }
 
