@@ -1,7 +1,11 @@
 * {
   box-sizing: border-box;
 }
-.wrapper {width: 920px; margin: 0 auto}
+.wrapper {
+  width: 920px;
+  margin: 0 auto;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -76,8 +80,9 @@ ul li.checked::before {
 }
 
 input {
+  outline:none;
   border-radius: 15px;
-  border: none;
+  border: inherit;
   width: 75%;
   padding: 10px;
   float: left;
@@ -86,6 +91,7 @@ input {
 
 .addButton {
   border-radius: 15px;
+  border: inherit;
   padding: 10px;
   width: 25%;
   background: #d9d9d9;
