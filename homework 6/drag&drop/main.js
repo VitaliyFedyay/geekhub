@@ -13,5 +13,6 @@ Element.prototype.makeDraggable = function() {
   }
   obj.ondragstart = function() { return 0 }
 }
-document.getElementById('first').makeDraggable()
-document.getElementById('second').makeDraggable()
+
+document.getElementById('first').makeDraggable();
+document.getElementById('second').makeDraggable();

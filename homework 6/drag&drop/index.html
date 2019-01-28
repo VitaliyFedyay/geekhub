@@ -9,8 +9,12 @@
 <body>
   <div id="parent">
     <h1>Drag&Drop</h1>
-    <div id="first" style="left:10px;top:10px;"></div>
-    <div id="second" style="left:10px;top:10px;"></div>
+    <div id="first" style="left:10px;top:10px;">
+      <button onclick="document.getElementById('first').remove()">x</button>
+    </div>
+    <div id="second" style="left:10px;top:10px;">
+        <button onclick="document.getElementById('second').remove()">x</button>
+      </div>
   </div>
   <script src="main.js"></script>
 </body>
