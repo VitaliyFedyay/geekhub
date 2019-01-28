@@ -47,10 +47,10 @@ function reverse(str) {
   return newString
 }
 
-function indexOf(array,index) {
+function indexOf(array,elem) {
   for (let key in array) {
-    if (array[key] == index) {
-      console.log(key)
+    if (array[key] == elem) {
+      return key
     }
   }
 }
