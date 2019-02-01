@@ -1,8 +1,8 @@
 var list = document.querySelector('ul');
 list.addEventListener('click', function (ev) {
-  if(ev.target.tagName === "LI") {
+  if(ev.target.tagName === "li") {
     ev.target.classList.toggle('checked');
-  } else if(ev.target.tagName === "SPAN") {
+  } else if(ev.target.tagName === "span") {
     var div = ev.target.parentNode;
     div.remove();
   }
@@ -19,7 +19,7 @@ function newElement() {
     document.getElementById('list').appendChild(li);
   }
   document.getElementById('toDoEl').value = "";
-  var span = document.createElement('SPAN');
+  var span = document.createElement('span');
   var txt = document.createTextNode("delete");
   span.className = "close";
   span.appendChild(txt);
