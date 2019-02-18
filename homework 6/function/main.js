@@ -49,7 +49,7 @@ function reverse(str) {
 
 const indexOf = (arr, number) => {
   for (let i = 0; i < arr.length; i++) {
-    if(arr[i]===number) {
+    if(arr[i] === number) {
       return i;
     }
   }
