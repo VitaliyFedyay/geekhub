@@ -47,13 +47,14 @@ function reverse(str) {
   return newString
 }
 
-function indexOf(array,elem) {
-  for (let key in array) {
-    if (array[key] == elem) {
-      return key
+const indexOf = (arr, number) => {
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i]===number) {
+      return i;
     }
   }
-}
+  return -1;
+};
 
 function isPalindrome(str) {
   var re = /[^A-Za-z0-9]/g;
